@@ -30,12 +30,12 @@ public class BeerServiceRestImpl implements BeerService {
 
     @Override
     public Optional&lt;BeerDto&gt; getBeerById(UUID uuid) {
-<span class="nc" id="L33">        return Optional.ofNullable(restTemplate.getForObject(beerServiceHost + BEER_PATH_V1 + uuid.toString(), BeerDto.class));</span>
+<span class="nc" id="L33">        return Optional.of(restTemplate.getForObject(beerServiceHost + BEER_PATH_V1 + uuid.toString(), BeerDto.class));</span>
     }
 
     @Override
     public Optional&lt;BeerDto&gt; getBeerByUpc(String upc) {
-<span class="nc" id="L38">        return Optional.ofNullable(restTemplate.getForObject(beerServiceHost + BEER_UPC_PATH_V1 + upc, BeerDto.class));</span>
+<span class="nc" id="L38">        return Optional.of(restTemplate.getForObject(beerServiceHost + BEER_UPC_PATH_V1 + upc, BeerDto.class));</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.3.201901230119</span></div></body></html>
