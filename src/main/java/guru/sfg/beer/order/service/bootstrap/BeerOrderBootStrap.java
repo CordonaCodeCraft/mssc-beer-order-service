@@ -2,8 +2,6 @@ package guru.sfg.beer.order.service.bootstrap;
 
 import guru.sfg.beer.order.service.domain.Customer;
 import guru.sfg.beer.order.service.repositories.CustomerRepository;
-import guru.sfg.beer.order.service.services.restservicies.BeerDto;
-import guru.sfg.beer.order.service.services.restservicies.BeerService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
