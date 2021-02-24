@@ -20,17 +20,17 @@ public class BeerOrderValidationListener {
     private final JmsTemplate jmsTemplate;
 
     @JmsListener(destination = JmsConfig.VALIDATE_ORDER_QUEUE)
-    public void list(Message msg) {
-
+    public void list(Message msg){
         boolean isValid = true;
         boolean sendResponse = true;
 
         ValidateOrderRequest request = (ValidateOrderRequest) msg.getPayload();
 
+        //condition to fail validation
         if (request.getBeerOrder().getCustomerRef() != null) {
-            if (request.getBeerOrder().getCustomerRef().equals("fail-validation")) {
+            if (request.getBeerOrder().getCustomerRef().equals("fail-validation")){
                 isValid = false;
-            } else if (request.getBeerOrder().getCustomerRef().equals("dont-validate")) {
+            } else if (request.getBeerOrder().getCustomerRef().equals("dont-validate")){
                 sendResponse = false;
             }
         }
