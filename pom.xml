@@ -10,13 +10,23 @@
     </parent>
 
     <groupId>guru.springframework</groupId>
+
     <artifactId>mssc-beer-order-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
     <name>mssc-beer-order-service</name>
+
     <description>MSSC Beer Order Service</description>
 
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.apache.activemq</groupId>
             <artifactId>artemis-jms-server</artifactId>
@@ -33,10 +43,6 @@
             <artifactId>awaitility</artifactId>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>
     </dependencies>
 
     <repositories>
@@ -45,5 +51,4 @@
             <url>https://jitpack.io</url>
         </repository>
     </repositories>
-
 </project>
